@@ -1,0 +1,11 @@
+flask
+eventlet
+flask-socketio
+psycopg2
+gunicorn
+python-dotenv
+Flask-SQLAlchemy
+Flask-Migrate
+Flask-Script
+dataclasses
+flask-cors
