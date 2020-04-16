@@ -1,10 +1,10 @@
-import sys
+import os, sys
 sys.dont_write_bytecode = True
-from flask_socketio import SocketIO
-from app import create_app, create_socket
+from app import create_app, socketio
+from dotenv import load_dotenv
+load_dotenv()
 
 app = create_app()
-socketio = create_socket()
 
 if __name__ == "__main__":
-    socketio.run(app, host='localhost', port=7777)
+    socketio.run(app, host='localhost', port=os.getenv('FLASK_RUN_PORT'))

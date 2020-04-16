@@ -6,6 +6,7 @@ class User(db.Model):
     id: int
     username: str
     email: str
+    fullname: str
     created: str
 
     __tablename__ = 'users'
@@ -24,6 +25,12 @@ class User(db.Model):
         index=True,
         unique=True,
         nullable=False
+    )
+    fullname = db.Column(
+        db.String(128),
+        index=False,
+        unique=False,
+        nullable=True
     )
     created = db.Column(
         db.DateTime,

@@ -1,1 +1,0 @@
-gunicorn -k eventlet -w 1 --threads=5 wsgi:app

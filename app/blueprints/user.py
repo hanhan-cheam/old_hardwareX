@@ -9,7 +9,7 @@ user_blueprint = Blueprint('user', __name__)
 def test():
     return "TEST"
 
-@user_blueprint.route('/user',methods=['GET'])
+@user_blueprint.route('/user', methods=['GET'])
 def create_user():
     username = request.args.get('user')
     email = request.args.get('email')
@@ -26,5 +26,4 @@ def create_user():
 @user_blueprint.route('/users', methods=['GET'])
 def get_users():
     users = User.query.all()
-    print(users)
     return jsonify(users)
