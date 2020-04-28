@@ -1,5 +1,6 @@
 from dataclasses import dataclass
-from .. import db
+# from .. import db
+from app import db
 
 @dataclass
 class User(db.Model):
@@ -25,7 +26,7 @@ class User(db.Model):
         index=True,
         unique=True,
         nullable=False
-    )
+    ) 
     fullname = db.Column(
         db.String(128),
         index=False,
